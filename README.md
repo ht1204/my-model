@@ -45,8 +45,31 @@ irb(main):002:0> Movie.all
   created_at: Sun, 11 Jun 2023 23:45:46.929250000 UTC +00:00,
   updated_at: Sun, 11 Jun 2023 23:45:46.929250000 UTC +00:00>]
 ```
+Press `exit` if you do not want to be in rails cli.
 
 This should work with any amount of movie registers as you wish.
+
+## Tech Notes
+If you want to rewrite the Model:
+```
+rails generate model Movie name:text duration:integer year:date rating:integer description image_url:text --force
+```
+
+Or try changing a field: `rails generate migration Movie rating:integer`
+
+Modify the model:
+```ruby
+class Movie < ApplicationRecord
+  enum rating: [:g, :pg, :pg_13, :r, :nc_17]
+end
+```
+
+Re-create the table:
+```
+rails db:migrate
+```
+
+Write `rails console` to recreate the activity.
 
 Enjoy RoR!
 
