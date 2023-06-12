@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  duration: 1
+  year: 2023-06-11
+  rating: MyString
+  description: MyString
+  image_url: MyText
+
+two:
+  name: MyText
+  duration: 1
+  year: 2023-06-11
+  rating: MyString
+  description: MyString
+  image_url: MyText
